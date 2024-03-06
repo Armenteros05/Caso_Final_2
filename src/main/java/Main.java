@@ -1,57 +1,51 @@
-import ANIMALES.Animal;
-import HABITAT.Habitat;
+import VISITANTES.Visitante;
 
-import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
-public static void main(String[] args) {
-    // Crear algunos hábitats y animales
-    Habitat habitat1 = new Habitat("Exhibición de leones");
-    Animal leon = new Animal("León", "Saludable");
-    habitat1.añadirAnimal(leon);
+public class Main {
+    public static void main(String[] args) {
+        // Crear algunos hábitats
+        HabitatAcuatico habitatAcuatico = new HabitatAcuatico("Exhibición de delfines");
+        HabitatTerrestre habitatTerrestre = new HabitatTerrestre("Exhibición de leones");
+        HabitatAviario habitatAviario = new HabitatAviario("Exhibición de águilas");
 
-    Habitat habitat2 = new Habitat("Exhibición de tigres");
-    Animal tigre = new Animal("Tigre", "Enfermo");
-    habitat2.añadirAnimal(tigre);
+        // Crear algunos animales
+        AnimalAcuatico delfin = new AnimalAcuatico("Delfín", "Saludable");
+        AnimalTerrestre leon = new AnimalTerrestre("León", "Saludable");
+        AnimalVolador aguila = new AnimalVolador("Águila", "Enferma");
 
-    // Crear algunos hábitats y animales adicionales
-    Habitat habitatAcuatico = new Habitat("Exhibición de delfines");
-    Animal delfin = new Animal("Delfín", "Saludable");
-    habitatAcuatico.añadirAnimal(delfin);
+        // Añadir los animales a los hábitats
+        habitatAcuatico.añadirAnimal(delfin);
+        habitatTerrestre.añadirAnimal(leon);
+        habitatAviario.añadirAnimal(aguila);
 
-    Habitat habitatVolador = new Habitat("Exhibición de águilas");
-    Animal aguila = new Animal("Águila", "Enferma");
-    habitatVolador.añadirAnimal(aguila);
+        // Crear un sistema de monitoreo y registrar los hábitats
+        SistemaMonitoreo sistemaMonitoreo = new SistemaMonitoreo();
+        sistemaMonitoreo.registrarHabitat(habitatAcuatico);
+        sistemaMonitoreo.registrarHabitat(habitatTerrestre);
+        sistemaMonitoreo.registrarHabitat(habitatAviario);
 
-    // Añadir las nuevas opciones a tu menú
-    System.out.println("1. Exhibición de leones");
-    System.out.println("2. Exhibición de tigres");
-    System.out.println("3. Exhibición de delfines");
-    System.out.println("4. Exhibición de águilas");
+        // Crear un sistema de guía virtual y registrar los hábitats y animales
+        SistemaGuiaVirtual sistemaGuiaVirtual = new SistemaGuiaVirtual();
+        sistemaGuiaVirtual.registrarHabitat(habitatAcuatico);
+        sistemaGuiaVirtual.registrarHabitat(habitatTerrestre);
+        sistemaGuiaVirtual.registrarHabitat(habitatAviario);
+        sistemaGuiaVirtual.registrarAnimal(delfin);
+        sistemaGuiaVirtual.registrarAnimal(leon);
+        sistemaGuiaVirtual.registrarAnimal(aguila);
 
-    // Añadir las nuevas opciones a tu switch
-    switch (opcion) {
-        case "1":
-            vigilancia.registrarLugar(habitat1.getNombre());
-            seguimiento.revisarAnimal(leon);
-            break;
-        case "2":
-            vigilancia.registrarLugar(habitat2.getNombre());
-            seguimiento.revisarAnimal(tigre);
-            break;
-        case "3":
-            vigilancia.registrarLugar(habitatAcuatico.getNombre());
-            seguimiento.revisarAnimal(delfin);
-            break;
-        case "4":
-            vigilancia.registrarLugar(habitatVolador.getNombre());
-            seguimiento.revisarAnimal(aguila);
-            break;
+        // Crear un módulo de manejo de recursos y registrar los recursos necesarios
+        ModuloManejoRecursos moduloManejoRecursos = new ModuloManejoRecursos();
+        moduloManejoRecursos.registrarRecurso(new Recurso("Alimento para delfines", 100));
+        moduloManejoRecursos.registrarRecurso(new Recurso("Alimento para leones", 100));
+        moduloManejoRecursos.registrarRecurso(new Recurso("Alimento para águilas", 100));
+
+        // Crear un sistema de mantenimiento y seguridad y registrar las instalaciones
+        SistemaMantenimientoSeguridad sistemaMantenimientoSeguridad = new SistemaMantenimientoSeguridad();
+        sistemaMantenimientoSeguridad.registrarInstalacion(habitatAcuatico);
+        sistemaMantenimientoSeguridad.registrarInstalacion(habitatTerrestre);
+        sistemaMantenimientoSeguridad.registrarInstalacion(habitatAviario);
+
+        // Simular la interacción con un visitante
+        Visitante visitante = new Visitante("Juan", "Amante de los mamíferos");
+        sistemaGuiaVirtual.proporcionarTourPersonalizado(visitante);
     }
-
-    // Para imprimir el estado de los animales, puedes hacer algo como esto:
-    System.out.println("Estado del león: " + leon.obtenerEstado());
-    System.out.println("Estado del tigre: " + tigre.obtenerEstado());
-    System.out.println("Estado del delfín: " + delfin.obtenerEstado());
-    System.out.println("Estado del águila: " + aguila.obtenerEstado());
 }
