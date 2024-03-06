@@ -11,7 +11,7 @@ public class Visitante {
     private List<String> preferenciasAnimales;
     private Map<String, Boolean> haVisitado;
 
-    public Visitante() {
+    public Visitante(String tipoTour) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.preferenciasAnimales = new ArrayList<>(); // Inicializamos la lista aquí
@@ -19,6 +19,9 @@ public class Visitante {
         for (String animal : preferenciasAnimales) {
             haVisitado.put(animal, false);
         }
+    }
+
+    public Visitante(String sergio, String tipoTour, Object o) {
     }
 
     public void visitar(String animal) {
@@ -37,5 +40,9 @@ public class Visitante {
             tour.append("\n");
         }
         return tour.toString();
+    }
+
+    public boolean tomarTour() {
+        return false;
     }
 }

@@ -1,5 +1,7 @@
 package Mantenimiento_Seguridad;
 
+import HABITAT.Habitat;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -32,5 +34,12 @@ public class Vigilancia {
     public String obtenerDuracionTour() {
         Duration duracion = Duration.between(inicioTour, LocalDateTime.now());
         return "Duración del tour: " + duracion.toMinutes() + " minutos";
+    }
+
+    public boolean monitorearZoo() {
+        return false;
+    }
+
+    public void registrarHabitat(Habitat habitat) {
     }
 }

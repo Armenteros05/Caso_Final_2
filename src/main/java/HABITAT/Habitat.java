@@ -8,24 +8,27 @@ public class Habitat {
     private double humedad;
     private String limpieza;
 
-    public Habitat(String tipo, double temperatura, double humedad, String limpieza) {
+    public Habitat() {
         this.tipo = tipo;
         this.temperatura = temperatura;
         this.humedad = humedad;
         this.limpieza = limpieza;
     }
 
-    public Habitat(String exhibiciónDeLeones) {
-    }
-
     public String monitorearCondiciones() {
         return "Monitoreando condiciones del hábitat " + tipo + " con temperatura " + temperatura + "°C, humedad " + humedad + "% y limpieza " + limpieza;
     }
 
-    public void añadirAnimal(Animal leon) {
-    }
 
     public String getNombre() {
+        return null;
+    }
+
+    public boolean monitorearTemperatura() {
+        return false;
+    }
+
+    public String getTipo() {
         return null;
     }
 }

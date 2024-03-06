@@ -9,9 +9,12 @@ public class Seguimiento {
     private Recursos recursos;
     private Map<Animal, String> registroRevisiones;
 
-    public Seguimiento(Recursos recursos) {
+    public Seguimiento() {
         this.recursos = recursos;
         this.registroRevisiones = new HashMap<>();
+    }
+
+    public Seguimiento(String time, String pendiente) {
     }
 
     public void revisarAnimal(Animal animal) {
@@ -37,5 +40,9 @@ public class Seguimiento {
             registro.append("- ").append(entry.getKey().getNombre()).append(": ").append(entry.getValue()).append("\n");
         }
         return registro.toString();
+    }
+
+    public boolean rastrearMantenimiento() {
+        return false;
     }
 }

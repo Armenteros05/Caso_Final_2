@@ -4,7 +4,7 @@ public class Terrestre extends Habitat{
     private double area;
 
     public Terrestre(double temperatura, double humedad, String limpieza, double area) {
-        super("terrestre", temperatura, humedad, limpieza);
+        super();
         this.area = area;
     }
 

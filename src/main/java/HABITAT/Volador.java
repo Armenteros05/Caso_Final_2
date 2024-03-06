@@ -4,7 +4,7 @@ public class Volador extends Habitat{
     private double altura;
 
     public Volador(double temperatura, double humedad, String limpieza, double altura) {
-        super("volador", temperatura, humedad, limpieza);
+        super();
         this.altura = altura;
     }
 

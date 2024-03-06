@@ -5,8 +5,11 @@ import java.util.Map;
 public class Recursos {
     private Map<String, Integer> inventario;
 
-    public Recursos(Map<String, Integer> inventario) {
+    public Recursos() {
         this.inventario = inventario;
+    }
+
+    public Recursos(String alimento, int i) {
     }
 
     public void añadirInventario(String item, int cantidad) {
@@ -34,5 +37,12 @@ public class Recursos {
             estado.append("- ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
         }
         return estado.toString();
+    }
+
+    public void agregarRecursos(Recursos recurso) {
+    }
+
+    public boolean rastrearInventario() {
+        return false;
     }
 }
