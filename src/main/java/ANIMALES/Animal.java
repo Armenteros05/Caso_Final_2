@@ -30,4 +30,11 @@ public Animal(String nombre, String tipo, String estado, String habitat) {
     public Animal getHabitat() {
         return null;
     }
+
+    public void setEstado(String saludable) {
+    }
+
+    public char[] getNombre() {
+        return new char[0];
+    }
 }
