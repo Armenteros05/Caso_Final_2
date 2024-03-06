@@ -18,4 +18,16 @@ public Animal(String nombre, String tipo, String estado, String habitat) {
     public String monitorearEstado() {
         return "Monitoreando estado del animal: " + estado;
     }
+
+    public String getEstado() {
+        return null;
+    }
+
+    public Object getTipo() {
+        return null;
+    }
+
+    public Animal getHabitat() {
+        return null;
+    }
 }
