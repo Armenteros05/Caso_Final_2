@@ -11,6 +11,10 @@ public class Quiosco {
         this.animales = animales;
     }
 
+    public Quiosco() {
+
+    }
+
     public String preguntarAnimal(String nombreAnimal) {
         if (animales.containsKey(nombreAnimal)) {
             Animal animal = animales.get(nombreAnimal);
@@ -38,5 +42,8 @@ public class Quiosco {
             }
         }
         return resultado.toString();
+    }
+
+    public void proporcionarInformacion(Animal tigre) {
     }
 }

@@ -15,6 +15,10 @@ public Animal(String nombre, String tipo, String estado, String habitat) {
 
     public Animal(String nombre, String acuático, String estado) {
     }
+
+    public Animal(String leon, String enfermo) {
+    }
+
     public String monitorearEstado() {
         return "Monitoreando estado del animal: " + estado;
     }

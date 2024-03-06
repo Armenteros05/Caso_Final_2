@@ -1,5 +1,6 @@
 package VISITANTES;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,10 +11,10 @@ public class Visitante {
     private List<String> preferenciasAnimales;
     private Map<String, Boolean> haVisitado;
 
-    public Visitante(String nombre, String tipo, List<String> preferenciasAnimales) {
+    public Visitante() {
         this.nombre = nombre;
         this.tipo = tipo;
-        this.preferenciasAnimales = preferenciasAnimales;
+        this.preferenciasAnimales = new ArrayList<>(); // Inicializamos la lista aquí
         this.haVisitado = new HashMap<>();
         for (String animal : preferenciasAnimales) {
             haVisitado.put(animal, false);

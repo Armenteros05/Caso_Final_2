@@ -1,5 +1,7 @@
 package HABITAT;
 
+import ANIMALES.Animal;
+
 public class Habitat {
     private String tipo;
     private double temperatura;
@@ -13,7 +15,17 @@ public class Habitat {
         this.limpieza = limpieza;
     }
 
+    public Habitat(String exhibiciónDeLeones) {
+    }
+
     public String monitorearCondiciones() {
         return "Monitoreando condiciones del hábitat " + tipo + " con temperatura " + temperatura + "°C, humedad " + humedad + "% y limpieza " + limpieza;
+    }
+
+    public void añadirAnimal(Animal leon) {
+    }
+
+    public String getNombre() {
+        return null;
     }
 }
