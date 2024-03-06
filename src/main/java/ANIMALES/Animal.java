@@ -41,4 +41,8 @@ public Animal(String nombre, String tipo, String estado, String habitat) {
     public char[] getNombre() {
         return new char[0];
     }
+
+    public String obtenerEstado() {
+        return null;
+    }
 }
