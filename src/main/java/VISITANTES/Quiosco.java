@@ -1,4 +1,4 @@
-package Visitantes;
+package VISITANTES;
 
 import ANIMALES.Animal;
 

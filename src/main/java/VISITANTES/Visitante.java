@@ -1,4 +1,4 @@
-package Visitantes;
+package VISITANTES;
 
 import java.util.HashMap;
 import java.util.List;
