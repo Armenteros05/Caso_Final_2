@@ -3,10 +3,10 @@ package HABITAT;
 import ANIMALES.Animal;
 
 public class Habitat {
-    private String tipo;
-    private double temperatura;
-    private double humedad;
-    private String limpieza;
+    String tipo;
+    double temperatura;
+    double humedad;
+    String limpieza;
 
     public Habitat() {
         this.tipo = tipo;

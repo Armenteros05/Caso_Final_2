@@ -48,9 +48,9 @@ public class Main {
                         System.out.println("Por favor, introduce el tipo de hábitat (Acuático, Terrestre, etc.):");
                         String tipoHabitat = scanner.nextLine();
                         if (tipoHabitat.equals("Acuático")) {
-                            Acuatico animal = new Acuatico("Tiburon", "Pez", "Saludable", 10);
+                            Acuatico animal = new Acuatico();
                             HABITAT.Acuatico habitat = new HABITAT.Acuatico(60, 80, "Limpio", 10);
-                            System.out.println(habitat.monitorearCondiciones());
+                            System.out.println(habitat.monitorearEstado());
 
                         } else if (tipoHabitat.equals("Terrestre")) {
                             Terrestre animal = new Terrestre(25, 60, "Limpio", 10);
@@ -66,6 +66,19 @@ public class Main {
                     case "3":
                         // Aquí va el código para gestionar personal
                         System.out.println("Gestionando personal...");
+                        System.out.println("Por favor, introduce el nombre del empleado:");
+                        String nombreEmpleado = scanner.nextLine();
+                        System.out.println("Por favor, introduce el tipo de empleado (Veterinario, Cuidador, etc.):");
+                        String tipoEmpleado = scanner.nextLine();
+                        System.out.println("Por favor, introduce el estado del empleado (Disponible, Ocupado, etc.):");
+                        String estadoEmpleado = scanner.nextLine();
+                        if (estadoEmpleado.equals("Disponible")) {
+                            System.out.println("El empleado " + nombreEmpleado + " está disponible.");
+                        } else if (estadoEmpleado.equals("Ocupado")) {
+                            System.out.println("El empleado " + nombreEmpleado + " está ocupado.");
+                        } else {
+                            System.out.println("El estado del empleado no es válido.");
+                        }
                         break;
                     case "4":
                         exit = true;
@@ -103,11 +116,11 @@ public class Main {
             System.out.println("Por favor, introduce el estado del animal (Saludable, Enfermo, Hambriento):");
             String estadoAnimal = scanner.nextLine();
             if (estadoAnimal.equals("Enfermo")) {
-                System.out.println("El animal " + nombreAnimal + " está enfermo. Se le administrará medicina.");
+                System.out.println("El " + nombreAnimal + " está enfermo. Se le administrará medicina.");
             } else if (estadoAnimal.equals("Hambriento")) {
-                System.out.println("El animal " + nombreAnimal + " está hambriento. Se le proporcionará comida.");
+                System.out.println("El " + nombreAnimal + " está hambriento. Se le proporcionará comida.");
             } else if (estadoAnimal.equals("Saludable")) {
-                System.out.println("El animal " + nombreAnimal + " está saludable.");
+                System.out.println("El " + nombreAnimal + " está saludable.");
             } else {
                 System.out.println("El estado del animal no es válido.");
             }
@@ -137,7 +150,7 @@ public class Main {
 
             // Cerrar el scanner
             scanner.close();
-        } else ;
+        } else
         System.out.println("Tipo de usuario no válido.");
     }
 
