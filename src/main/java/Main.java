@@ -5,12 +5,13 @@ import HABITAT.Habitat;
 import Mantenimiento_Seguridad.Vigilancia;
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("¿Eres visitante o staff?");
         String userType = scanner.nextLine();
+
 
         if (userType.equalsIgnoreCase("staff")) {
             boolean exit = false;
@@ -227,7 +228,8 @@ public class Main {
                 System.out.println("El " + nombreAnimal + " vive en un hábitat volador, en el que se encuentra a una temperatura de 17°C, con un 50% de humedad y limpieza óptima, ¡Mira como vuela!");
             } else
                 System.out.println("El tipo de hábitat no es válido.");
-
+            System.out.println("--------------------------------------------------------");
+            System.out.println("Gracias por visitar el zoo, ¡hasta la próxima!");
 
             // Cerrar el scanner
             scanner.close();
