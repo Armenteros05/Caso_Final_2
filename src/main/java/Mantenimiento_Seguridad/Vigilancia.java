@@ -24,22 +24,14 @@ public class Vigilancia {
     }
 
     public String obtenerRegistroTour() {
-        StringBuilder registro = new StringBuilder("Registro del tour:\n");
+        String registro = "Registro de tour de vigilancia:\n";
         for (int i = 0; i < registroLugares.size(); i++) {
-            registro.append("- ").append(registroLugares.get(i)).append(" (").append(registroHoras.get(i)).append(")\n");
+            registro += registroLugares.get(i) + " - " + registroHoras.get(i) + "\n";
         }
-        return registro.toString();
+        return registro;
     }
-
     public String obtenerDuracionTour() {
         Duration duracion = Duration.between(inicioTour, LocalDateTime.now());
-        return "Duración del tour: " + duracion.toMinutes() + " minutos";
-    }
-
-    public boolean monitorearZoo() {
-        return false;
-    }
-
-    public void registrarHabitat(Habitat habitat) {
+        return "Duración del tour del visitante seleccionado: " + duracion.toMinutes() + " minutos";
     }
 }
